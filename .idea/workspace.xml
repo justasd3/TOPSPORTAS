@@ -129,12 +129,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/ivykiai" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Justas\Desktop\TOPSPORTAS\resources\views\ivykiai" />
       <recent name="C:\Users\Justas\Desktop\TOPSPORTAS\resources\views\admin\users" />
     </key>
   </component>
@@ -154,7 +155,7 @@
       <updated>1607257532609</updated>
       <workItem from="1607257533646" duration="4559000" />
       <workItem from="1608225387248" duration="602000" />
-      <workItem from="1608306662382" duration="175000" />
+      <workItem from="1608306662382" duration="5222000" />
     </task>
     <servers />
   </component>
@@ -166,5 +167,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="136" y="244" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607260309374" />
+    <state x="142" y="273" width="672" height="678" key="search.everywhere.popup" timestamp="1608308184932">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="142" y="273" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608308184932" />
   </component>
 </project>

@@ -25,4 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/users','UsersController',['except' => ['show','create','store']]);
 });
-Route::get('/ivykiai', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile');
+Route::get('/ivykiai', [App\Http\Controllers\IvykiuController::class, 'index'])->name('ivykiai');
+
+Route::get('/ivykiai/kurti', [App\Http\Controllers\IvykiuController::class, 'kurti'])->name('ivykiai.kurti');
+Route::post('/ivykiai/done', [App\Http\Controllers\IvykiuController::class, 'done'])->name('ivykiai.done');

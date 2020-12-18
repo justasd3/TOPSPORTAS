@@ -66,7 +66,7 @@
                                     <a class="dropdown-item" href="{{route('admin.users.index')}}">
                                         Users Management
                                     </a>
-                                    <a class="dropdown-item" href="{{route('admin.users.index')}}">
+                                    <a class="dropdown-item" href="{{route('ivykiai')}}">
                                         Įvykiai
                                     </a>
 
