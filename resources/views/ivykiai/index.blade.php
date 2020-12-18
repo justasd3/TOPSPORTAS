@@ -20,11 +20,30 @@
                                 <table class="table">
                                     <thead>
                                     <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Pavadinimas</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Komanda</th>
+                                        <th scope="col">Koeficientas</th>
+                                        <th scope="col">Trukmė</th>
+                                        <th scope="col">Komanda</th>
+                                        <th scope="col">Koeficientas</th>
+                                        <th scope="col">Pradzia</th>
+
                                         <th scope="col"></th>
                                     </tr>
                                     </thead>
+                                    @foreach($ivykiai as $ivyk)
+                                            <tr>
+                                                <th scope="row">{{ $ivyk->id }}</th>
+                                                <th scope="row">{{ $ivyk->komanda_1}}</th>
+                                                <th scope="row">{{ $ivyk->koeficientas_1 }}</th>
+                                                <th scope="row">{{ $ivyk->trukme }}</th>
+                                                <th scope="row">{{ $ivyk->komanda_2 }}</th>
+                                                <th scope="row">{{ $ivyk->koeficientas_1}}</th>
+                                                <th scope="row">{{ $ivyk->pradzia }}</th>
+                                            </tr>
+                                            <tbody>
+                                            @endforeach
+                                            </tbody>
                                 </table>
                             </div>
                         </div>

@@ -16,11 +16,12 @@ class CreateIvykiaisTable extends Migration
         Schema::create('ivykiais', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-
             $table->date('pradzia');
             $table->integer('trukme');
             $table->double('koeficientas_1');
             $table->double('koeficientas_2');
+            $table->string('komanda_1');
+            $table->string('komanda_2');
             $table->string('rezultatas')->nullable();
             $table->boolean('status');
         });

@@ -10,7 +10,7 @@
                                 <label for="cars">Pasirinkite komaną:</label>
                                 <select name="Komanda_1" id="cars">
                                     @foreach($komanda as $kom)
-                                        <option value={{$kom->pavadinimas}}>{{$kom->pavadinimas}}</option>
+                                        <option name="kom_1" value={{$kom->pavadinimas}}>{{$kom->pavadinimas}}</option>
                                     @endforeach
                                 </select>
                     </div>

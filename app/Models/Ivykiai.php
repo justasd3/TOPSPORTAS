@@ -14,7 +14,13 @@ class Ivykiai extends Model
         'trukme',
         'koeficientas_1',
         'koeficientas_2',
+        'komanda_1',
+        'komanda_2',
         'rezultatas',
         'status',
     ];
+    public function komanda()
+    {
+        return $this->belongsTo('App\Models\Ivykiai');
+    }
 }

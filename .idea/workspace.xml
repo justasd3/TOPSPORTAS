@@ -129,12 +129,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/ivykiai" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/migrations" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Justas\Desktop\TOPSPORTAS\database\migrations" />
       <recent name="C:\Users\Justas\Desktop\TOPSPORTAS\resources\views\ivykiai" />
       <recent name="C:\Users\Justas\Desktop\TOPSPORTAS\resources\views\admin\users" />
     </key>
@@ -155,7 +156,7 @@
       <updated>1607257532609</updated>
       <workItem from="1607257533646" duration="4559000" />
       <workItem from="1608225387248" duration="602000" />
-      <workItem from="1608306662382" duration="5222000" />
+      <workItem from="1608306662382" duration="8783000" />
     </task>
     <servers />
   </component>

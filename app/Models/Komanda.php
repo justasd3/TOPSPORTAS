@@ -10,5 +10,8 @@ class Komanda extends Model
     use HasFactory;
 
 
-
+    public function ivykis()
+    {
+        return $this->hasMany('App\Models\Ivykiai');
+    }
 }

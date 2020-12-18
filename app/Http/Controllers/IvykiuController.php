@@ -10,7 +10,8 @@ class IvykiuController extends Controller
 {
     public function index()
     {
-        return view('ivykiai.index');
+        $ivykiai = Ivykiai::all();
+        return view('ivykiai.index')->with('ivykiai',$ivykiai);
     }
 
     public function kurti()
@@ -26,6 +27,8 @@ class IvykiuController extends Controller
             'trukme' => $request->input('trukme'),
             'koeficientas_1' => $request->input('kof_1'),
             'koeficientas_2' => $request->input('kof_2'),
+            'komanda_1' => $request->input('Komanda_1'),
+            'komanda_2' => $request->input('Komanda_2'),
             'status' => 0,
         ]);
         $ivykis->save();
