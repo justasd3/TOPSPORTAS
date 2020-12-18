@@ -53,4 +53,11 @@ class IvykiuController extends Controller
         $ivykis->update();
         return redirect('/ivykiai');
     }
+
+    public function trinti(Ivykiai $id)
+    {
+        $ivykis = Ivykiai::find($id)->first();
+        $ivykis->delete();
+        return redirect('/ivykiai');
+    }
 }
