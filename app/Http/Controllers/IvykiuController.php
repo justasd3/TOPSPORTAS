@@ -34,4 +34,23 @@ class IvykiuController extends Controller
         $ivykis->save();
         return redirect('/ivykiai');
     }
+
+    public function redaguoti(Ivykiai $id)
+    {
+        $komanda = Komanda::all();
+        $ivykis = Ivykiai::find($id)->first();
+        return view('ivykiai.redaguoti')->with('ivykis', $ivykis)->with('komanda', $komanda);
+    }
+    public function redaguoti_done(Request $request)
+    {
+        $ivykis = Ivykiai::find($request->input('id'));
+        $ivykis->pradzia = $request->input('start');
+        $ivykis->trukme = $request->input('trukme');
+        $ivykis->koeficientas_1 = $request->input('kof_1');
+        $ivykis->koeficientas_2 = $request->input('kof_2');
+        $ivykis->komanda_1 = $request->input('Komanda_1');
+        $ivykis->komanda_2 = $request->input('Komanda_2');
+        $ivykis->update();
+        return redirect('/ivykiai');
+    }
 }
