@@ -11,6 +11,9 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
@@ -122,6 +125,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1lHcc2PVFUXIgB75NjsX8ZBbcZT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -156,7 +160,8 @@
       <updated>1607257532609</updated>
       <workItem from="1607257533646" duration="4559000" />
       <workItem from="1608225387248" duration="602000" />
-      <workItem from="1608306662382" duration="16221000" />
+      <workItem from="1608306662382" duration="16822000" />
+      <workItem from="1608383100286" duration="356000" />
     </task>
     <servers />
   </component>
