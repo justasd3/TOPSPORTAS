@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b0a9667-1676-4d92-ad3a-6e9914a6568c" name="Default Changelist" comment="" />
+    <list default="true" id="4b0a9667-1676-4d92-ad3a-6e9914a6568c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Komanda.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Komanda.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ivykiai/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ivykiai/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +18,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -122,6 +133,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1lHcc2PVFUXIgB75NjsX8ZBbcZT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -129,12 +141,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/ivykiai" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Pasiulymai" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Povilas\Documents\GitHub\TOPSPORTAS\resources\views\Pasiulymai" />
       <recent name="C:\Users\Justas\Desktop\TOPSPORTAS\resources\views\ivykiai" />
       <recent name="C:\Users\Justas\Desktop\TOPSPORTAS\database\migrations" />
       <recent name="C:\Users\Justas\Desktop\TOPSPORTAS\resources\views\admin\users" />
@@ -157,20 +170,16 @@
       <workItem from="1607257533646" duration="4559000" />
       <workItem from="1608225387248" duration="602000" />
       <workItem from="1608306662382" duration="14146000" />
+      <workItem from="1608322120699" duration="7041000" />
+      <workItem from="1608377733225" duration="244000" />
+      <workItem from="1608378039582" duration="4894000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="136" y="244" key="run.anything.popup" timestamp="1607260309374">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="136" y="244" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607260309374" />
-    <state x="142" y="273" width="672" height="678" key="search.everywhere.popup" timestamp="1608308184932">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="142" y="273" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1608308184932" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

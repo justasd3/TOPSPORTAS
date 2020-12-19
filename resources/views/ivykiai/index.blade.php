@@ -21,13 +21,12 @@
                                     <thead>
                                     <tr>
                                         <th scope="col">ID</th>
-                                        <th scope="col">Komanda</th>
-                                        <th scope="col">Koeficientas</th>
-                                        <th scope="col">Trukmė</th>
-                                        <th scope="col">Komanda</th>
-                                        <th scope="col">Koeficientas</th>
+                                        <th scope="col">Komanda 1</th>
+                                        <th scope="col">Koeficientas 1</th>
+                                        <th scope="col">Trukme</th>
+                                        <th scope="col">Komanda 2</th>
+                                        <th scope="col">Koeficientas 2</th>
                                         <th scope="col">Pradzia</th>
-                                        <th scope="col">Veiksmai</th>
 
 
                                         <th scope="col"></th>
