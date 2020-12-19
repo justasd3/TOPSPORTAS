@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Ivykiai;
 use App\Models\Pasiulymai;
 use Illuminate\Http\Request;
 
@@ -46,6 +47,11 @@ class PasiulymuController extends Controller
         $pasiulymas->update();
         return redirect('/pasiulymai');
     }
-
+    public function trinti(Pasiulymai $id)
+    {
+        $ivykis = Pasiulymai::find($id)->first();
+        $ivykis->delete();
+        return redirect('/pasiulymai');
+    }
 
 }
