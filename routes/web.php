@@ -32,6 +32,7 @@ Route::post('/ivykiai/done', [App\Http\Controllers\IvykiuController::class, 'don
 
 Route::get('/ivykiai/{id}', [App\Http\Controllers\IvykiuController::class, 'redaguoti'])->name('ivykiai.redaguoti');
 Route::post('/ivykiai/redaguoti/done', [App\Http\Controllers\IvykiuController::class, 'redaguoti_done'])->name('ivykiai.redaguoti.done');
+
 Route::post('/ivykiai/trinti/{id}', [App\Http\Controllers\IvykiuController::class, 'trinti'])->name('');
 
 Route::get('/pasiulymai', [App\Http\Controllers\PasiulymuController::class, 'index'])->name('pasiulymai');
@@ -42,3 +43,5 @@ Route::post('/pasiulymai/done', [App\Http\Controllers\PasiulymuController::class
 Route::get('/pasiulymai/{id}', [App\Http\Controllers\PasiulymuController::class, 'redaguoti'])->name('pasiulymai.redaguoti');
 Route::post('/pasiulymai/redaguoti/done', [App\Http\Controllers\PasiulymuController::class, 'redaguoti_done'])->name('pasiulymai.redaguoti.done');
 Route::post('/pasiulymai/trinti/{id}', [App\Http\Controllers\PasiulymuController::class, 'trinti'])->name('pasiulymai.trinti');
+
+Route::get('/ivykiai/trinti/{id}', [App\Http\Controllers\IvykiuController::class, 'trinti'])->name('ivykiai.trinti');
