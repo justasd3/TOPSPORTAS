@@ -65,6 +65,29 @@
 
                     </div>
                 </div>
+
+                <h1 class="pt-2"></h1>
+                <div class="card">
+                    <div class="card-header">STATYMAI</div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Komanda</th>
+                                <th scope="col">Statymo suma</th>
+                            </tr>
+                            </thead>
+                                @foreach($bets as $bet)
+                                <tr>
+                                    <th scope="col"><a href="/allBetsPlayer/playerId={{ $bet->ZaidejoId }}"> {{$bet->Komanda}}</a></th>
+                                    <th scope="col"><a href="/allBetsPlayer/playerId={{ $bet->ZaidejoId }}"> {{$bet->Statymo_suma}}</a></th>
+                                </tr>
+
+                            @endforeach
+                        </table>
+
+                    </div>
+                </div>
         </div>
     </div>
 

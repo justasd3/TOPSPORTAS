@@ -18,41 +18,42 @@ class BetController extends Controller
 
     public function index($playerId)
     {
-        $bets = DB::select('select * from bets where PlayerId = ?',[$playerId]);
-        return view('allBetsPlayer',['bets'=>$bets]);
+        $bets = DB::select('select * from bets where ZaidejoId = ?',[$playerId]);
+        return view('statymai/allBets',['bets'=>$bets]);
     }
 
-    public function createSubmission($pid)
+    public function createSubmission($pid, $eid)
+    //public function createSubmission($eid)
     {   
-        $teams = DB::select('select * from teams');
-        $player = DB::select('select * from person where pId = ?',[$pid]);
-        return view('betAdd',['teams'=>$teams],['player'=>$player]);
+        $event = DB::select('select * from ivykiais where id = ?', [$eid]);
+        $player = DB::select('select * from players where id = ?',[$pid]);
+        return view('statymai/betAdd',['event'=>$event],['player'=>$player]);
     }
 
-    public function createEdit($pid, $bid)
+    public function createEdit($pid, $bid, $eid)
     {
-        $teams = DB::select('select * from teams');
-        $player = DB::select('select * from person where pId = ?',[$pid]);
-        $bets = DB::select('select * from bets where bId = ? AND PlayerId = ?', [$bid,$pid]);
-        return view('betEdit')->with('data', [
-            'teams' => $teams, 
+        $event = DB::select('select * from ivykiais where id = ?',[$eid]);
+        $player = DB::select('select * from players where id = ?',[$pid]);
+        $bets = DB::select('select * from bets where id = ? AND ZaidejoId = ?', [$bid,$pid]);
+        return view('statymai/betEdit')->with('data', [
+            'event' => $event, 
             'player' => $player,
             'bets' => $bets
         ]);
-        //return view('betEdit',['bets'=>$bets],['player'=>$player],['teams'=>$teams]);
     }
 
     public function postBet(Request $request) {
 
         $data = $request->input();
-        $player = DB::select('select * from person where pId = ?',[$data['playerId']]);
+        $player = DB::select('select * from players where id = ?',[$data['playerId']]);
         $remain = ((int)$player[0]->Balance - (int)$data['bet']);
-        DB::update('update person set Balance = ? where pId = ?',[$remain,$data['playerId']]);
+        DB::update('update players set Balance = ? where id = ?',[$remain,$data['playerId']]);
 		try {
 			$bet = new Bet;
-            $bet->Team = $data['team'];
-            $bet->Bet = $data['bet'];
-            $bet->PlayerId = $data['playerId'];
+            $bet->Komanda = $data['team'];
+            $bet->Statymo_suma = $data['bet'];
+            $bet->ZaidejoId = $data['playerId'];
+            $bet->IvykioId = $data['eventId'];
             $bet->save();
             return redirect('../allBetsPlayer/playerId='.$data['playerId'])->with('Success',"Operation completed successfuly");
 		}
@@ -62,15 +63,15 @@ class BetController extends Controller
     }
 
     public function showBet($pid, $bid) {
-        $bets = DB::select('select * from bets where bId = ? AND PlayerId = ?', [$bid,$pid]);
-        return view('viewBet',['bets'=>$bets]);
+        $bets = DB::select('select * from bets where id = ? AND ZaidejoId = ?', [$bid,$pid]);
+        return view('statymai/viewBet',['bets'=>$bets]);
         }
 
     public function editBet(Request $request,$pid,$bid) {
 
         $data = $request->input();
 
-        $player = DB::select('select * from person where pId = ?',[$pid]);
+        $player = DB::select('select * from players where id = ?',[$pid]);
         $oldBet = $data['oldBet'];
         $newBet = $data['bet'];
         if ($oldBet < $newBet) {
@@ -82,11 +83,35 @@ class BetController extends Controller
         } else {
             $remain = ((int)$player[0]->Balance - (int)$data['bet']);
         }
-        DB::update('update person set Balance = ? where pId = ?',[$remain,$pid]);
+        DB::update('update players set Balance = ? where id = ?',[$remain,$pid]);
 
         $team = $data['team'];
         $bet = $data['bet'];
-        DB::update('update bets set team = ?,bet=? where bId = ? AND PlayerId = ?',[$team,$bet,$bid,$pid]);
+        DB::update('update bets set Komanda = ?,Statymo_suma=? where id = ? AND ZaidejoId = ?',[$team,$bet,$bid,$pid]);
         return redirect('../allBetsPlayer/playerId='.$pid.'&betId='.$bid)->with('Success',"Operation completed successfuly");
-        }
+    }
+
+    public function payoutsGet($pid, $bid) {
+        $bets = DB::select('select * from bets where id = ? AND ZaidejoId = ?', [$bid, $pid]);
+        $player = DB::select('select * from players where id = ?',[$pid]);
+        return view('statymai/payouts',['bets'=>$bets],['player'=>$player]);
+    }
+
+    public function payout($pid,$bid) {
+
+        $player = DB::select('select * from players where id = ?',[$pid]);
+        $bets = DB::select('select * from bets where id = ? AND ZaidejoId',[$bid, $pid]);
+
+        $sum = ((int)$bets[0]->Statymo_suma / 2);
+
+        $balance = ((int)$player[0]->Balance + $sum);
+
+        $bank = ((int)$player[0]->Bank + $sum);
+
+        DB::update('update players set Balance = ?, Bank = ? where id = ?',[$balance,$bank,$pid]);
+
+        DB::update('update bets set Mokejimo_statusas = ? where id = ? AND ZaidejoId = ?',[1,$bid,$pid]);
+
+        return redirect('/allBetsPlayer/playerId='.$pid)->with('Success',"Operation completed successfuly");
+    }
 }

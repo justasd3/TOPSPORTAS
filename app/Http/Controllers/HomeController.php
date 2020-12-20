@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ivykiai;
 use App\Models\Komanda;
+use App\Models\Bet;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,8 +28,9 @@ class HomeController extends Controller
     {
         $komandos = Komanda::all();
         $ivykiai = Ivykiai::all();
+        $statymai = Bet::all();
 
-        return view('home')->with('ivykiai',$ivykiai)->with('komandos',$komandos);
+        return view('home')->with('ivykiai',$ivykiai)->with('komandos',$komandos)->with('bets',$statymai);
     }
 
     public function komanda(Request $request)

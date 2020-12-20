@@ -49,16 +49,20 @@ Route::get('/pasiulymai/trinti/{id}', [App\Http\Controllers\PasiulymuController:
 
 Route::get('/displayBetFunctions', 'BetController@playerIndex');
 
-Route::get('/createBet/playerId={pId}', 'BetController@createSubmission');
+Route::get('/createBet/playerId={pid}&eventId={eid}', 'BetController@createSubmission');
 
-Route::post('/createBet/playerId={pId}', 'BetController@postBet');
-
-
-Route::get('/editBet/playerId={pId}&betId={bId}','BetController@createEdit'); 
-
-Route::post('/editBet/playerId={pId}&betId={bId}','BetController@editBet');
+Route::post('/createBet/playerId={pid}&eventId={eid}', 'BetController@postBet');
 
 
-Route::get('/viewBet/playerId={pId}&betId={bId}','BetController@showBet'); 
+Route::get('/editBet/playerId={pid}&betId={bid}&eventId={eid}','BetController@createEdit'); 
 
-Route::get('/allBetsPlayer/playerId={pId}','BetController@index');
+Route::post('/editBet/playerId={pid}&betId={bid}&eventId={eid}','BetController@editBet');
+
+
+Route::get('/viewBet/playerId={pid}&betId={bid}','BetController@showBet'); 
+
+Route::get('/allBetsPlayer/playerId={pid}','BetController@index');
+
+Route::get('/payout/playerId={pid}&betId={bid}','BetController@payoutsGet'); 
+
+Route::post('/payout/playerId={pid}&betId={bid}','BetController@payout'); 

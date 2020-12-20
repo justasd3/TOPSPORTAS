@@ -27,8 +27,10 @@
                                         <th scope="col">Komanda 2</th>
                                         <th scope="col">Koeficientas 2</th>
                                         <th scope="col">Pradzia</th>
-                                        <th scope="col">Veiksmai</th>
 
+
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
                                         <th scope="col"></th>
                                     </tr>
                                     </thead>
@@ -43,6 +45,8 @@
                                                 <th scope="row">{{ $ivyk->pradzia }}</th>
                                                 <th scope="row"><a href="{{route('ivykiai.redaguoti', $ivyk->id)}}"><button type="button" class="btn btn-primary">Redaguoti</button></a></th>
                                                 <th scope="row"><a href="{{route('ivykiai.trinti', $ivyk->id)}}"><button type="button" class="btn btn-primary">Trinti</button></a></th>
+                                                <th scope="row"><a href="/createBet/playerId=1&eventId={{$ivyk->id}}"><button type="button" class="btn btn-primary">Kurti statymą</button></a></th>
+                                                <!--<th scope="row"><a href="/createBet/eventId={{$ivyk->id}}"><button type="button" class="btn btn-primary">Statyti</button></a></th> -->
                                             </tr>
                                             <tbody>
                                             @endforeach
