@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ivykiai;
+use App\Models\Komanda;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $komandos = Komanda::all();
+        $ivykiai = Ivykiai::all();
+
+        return view('home')->with('ivykiai',$ivykiai)->with('komandos',$komandos);
+    }
+
+    public function komanda(Request $request)
+    {
+        $komanda = $request->route('pavadinimas');
+
+        $kom = Komanda::where('pavadinimas','=',$komanda)->first();
+        return view('ivykiai.komanda')->with('komanda', $kom);
     }
 }

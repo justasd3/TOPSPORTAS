@@ -27,7 +27,7 @@
                                         <th scope="col">Komanda 2</th>
                                         <th scope="col">Koeficientas 2</th>
                                         <th scope="col">Pradzia</th>
-
+                                        <th scope="col">Veiksmai</th>
 
                                         <th scope="col"></th>
                                     </tr>
