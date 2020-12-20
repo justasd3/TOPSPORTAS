@@ -18,6 +18,7 @@ class Ivykiai extends Model
         'komanda_2',
         'rezultatas',
         'status',
+        'laikas',
     ];
     public function komanda()
     {
