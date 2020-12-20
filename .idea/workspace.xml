@@ -162,6 +162,7 @@
       <workItem from="1608225387248" duration="602000" />
       <workItem from="1608306662382" duration="16822000" />
       <workItem from="1608383100286" duration="767000" />
+      <workItem from="1608463343052" duration="5160000" />
     </task>
     <servers />
   </component>
@@ -173,9 +174,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608384537679" />
-    <state x="136" y="244" key="run.anything.popup" timestamp="1607260309374">
+    <state x="955" y="0" width="972" height="1047" key="dock-window-1" timestamp="1608464468224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="955" y="0" width="972" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1608464468224" />
+    <state x="136" y="244" key="run.anything.popup" timestamp="1608463912841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="136" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608463912841" />
     <state x="136" y="244" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1607260309374" />
     <state x="142" y="273" width="672" height="678" key="search.everywhere.popup" timestamp="1608308184932">
       <screen x="0" y="0" width="1920" height="1040" />

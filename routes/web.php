@@ -34,6 +34,9 @@ Route::get('/ivykiai/{id}', [App\Http\Controllers\IvykiuController::class, 'reda
 Route::post('/ivykiai/redaguoti/done', [App\Http\Controllers\IvykiuController::class, 'redaguoti_done'])->name('ivykiai.redaguoti.done');
 
 Route::get('/ivykiai/trinti/{id}', [App\Http\Controllers\IvykiuController::class, 'trinti'])->name('ivykiai.trinti');
+Route::get('/komanda/{pavadinimas}', [App\Http\Controllers\HomeController::class, 'komanda'])->name('komanda');
+
+
 
 Route::get('/pasiulymai', [App\Http\Controllers\PasiulymuController::class, 'index'])->name('pasiulymai');
 
