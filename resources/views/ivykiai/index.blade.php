@@ -12,8 +12,10 @@
                             <div class="card-header">ĮVYKIAI
                             <a href="{{route("ivykiai.kurti") }}">
                                 @csrf
+                                @if(Auth::user()->email == "admin@admin.com")
                                 <button type="button" class="btn btn-success float-right"> Kurti įvykį
-                                </button>
+                                </button>@endif
+
                             </a>
                             </div>
                             <div class="card-body">
@@ -43,10 +45,15 @@
                                                 <th scope="row">{{ $ivyk->komanda_2 }}</th>
                                                 <th scope="row">{{ $ivyk->koeficientas_1}}</th>
                                                 <th scope="row">{{ $ivyk->pradzia }}</th>
+                                                @if(Auth::user()->email == "admin@admin.com")
                                                 <th scope="row"><a href="{{route('ivykiai.redaguoti', $ivyk->id)}}"><button type="button" class="btn btn-primary">Redaguoti</button></a></th>
                                                 <th scope="row"><a href="{{route('ivykiai.trinti', $ivyk->id)}}"><button type="button" class="btn btn-primary">Trinti</button></a></th>
+<<<<<<< HEAD
                                                 <th scope="row"><a href="/createBet/playerId=1&eventId={{$ivyk->id}}"><button type="button" class="btn btn-primary">Kurti statymą</button></a></th>
                                                 <!--<th scope="row"><a href="/createBet/eventId={{$ivyk->id}}"><button type="button" class="btn btn-primary">Statyti</button></a></th> -->
+=======
+                                                    @endif
+>>>>>>> ae59cb19f3e687b229c52bec3632ac44f3945764
                                             </tr>
                                             <tbody>
                                             @endforeach
