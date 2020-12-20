@@ -27,10 +27,10 @@
                                             <th scope="row">{{ $bet->id }}</th>
                                             <th scope="row">{{ $bet->Komanda}}</th>
                                             <th scope="row">{{ $bet->Statymo_suma }}</th>
+                                            @if($bet->Mokejimo_statusas == 0)
                                             <td><a href = '../editBet/playerId={{ $bet->ZaidejoId }}&betId={{ $bet->id }}&eventId={{ $bet->IvykioId }}'>Edit</a></td>
                                             <td><a href = '../viewBet/playerId={{ $bet->ZaidejoId }}&betId={{ $bet->id }}'>Show</a></td>
-                                            @if($bet->Mokejimo_statusas == 0)
-                                                <td id="win"><a href = '../payout/playerId={{ $bet->ZaidejoId }}&betId={{ $bet->id }}'>Dalinis laimėjimas</a></td>
+                                            <td id="win"><a href = '../payout/playerId={{ $bet->ZaidejoId }}&betId={{ $bet->id }}'>Dalinis laimėjimas</a></td>
                                             @endif
                                             @if($bet->Mokejimo_statusas == 1)
                                             <td id="win"><b>Laimėjimas išmokėtas</b></td>

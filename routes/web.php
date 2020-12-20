@@ -47,22 +47,16 @@ Route::get('/pasiulymai/{id}', [App\Http\Controllers\PasiulymuController::class,
 Route::post('/pasiulymai/redaguoti/done', [App\Http\Controllers\PasiulymuController::class, 'redaguoti_done'])->name('pasiulymai.redaguoti.done');
 Route::get('/pasiulymai/trinti/{id}', [App\Http\Controllers\PasiulymuController::class, 'trinti'])->name('pasiulymai.trinti');
 
-Route::get('/displayBetFunctions', 'BetController@playerIndex');
+/*Bet routes*/
 
 Route::get('/createBet/playerId={pid}&eventId={eid}', 'BetController@createSubmission');
-
 Route::post('/createBet/playerId={pid}&eventId={eid}', 'BetController@postBet');
 
-
 Route::get('/editBet/playerId={pid}&betId={bid}&eventId={eid}','BetController@createEdit'); 
-
 Route::post('/editBet/playerId={pid}&betId={bid}&eventId={eid}','BetController@editBet');
 
-
 Route::get('/viewBet/playerId={pid}&betId={bid}','BetController@showBet'); 
-
 Route::get('/allBetsPlayer/playerId={pid}','BetController@index');
 
 Route::get('/payout/playerId={pid}&betId={bid}','BetController@payoutsGet'); 
-
 Route::post('/payout/playerId={pid}&betId={bid}','BetController@payout'); 
