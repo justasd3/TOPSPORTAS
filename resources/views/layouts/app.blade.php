@@ -71,6 +71,11 @@
                                     <a class="dropdown-item" href="{{route('profile')}}">
                                         Profilis
                                     </a>
+                                    @if (head(Auth::user()->roles()->get()->pluck('id')->toArray()) > 1)
+                                        <a class="dropdown-item" href="{{route('profile.detailed')}}">
+                                            Detali vartotojų ataskaita
+                                        </a>
+                                    @endif
                                     <a class="dropdown-item" href="{{route('messages')}}">
                                         Žinutės
                                     </a>

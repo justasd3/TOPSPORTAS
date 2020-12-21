@@ -70,3 +70,5 @@ Route::post('/messages/send', [App\Http\Controllers\MessagesController::class, '
 # Profilis
 Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
 Route::post('/profile/update', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+Route::get('/profile/detailed', [App\Http\Controllers\ProfileController::class, 'detailed'])->name('profile.detailed')->middleware('can:edit');
+Route::post('/profile/detailedGet', [App\Http\Controllers\ProfileController::class, 'detailedGet'])->name('profile.detailedGet')->middleware('can:edit');
