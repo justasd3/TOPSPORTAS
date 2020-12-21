@@ -5,17 +5,17 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header">{{ __('Vartotojų valdymas') }}</div>
                     <div class="card-body">
 
                     <table class="table">
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Roles</th>
-                            <th scope="col">Actions</th>
+                            <th scope="col">Vardas</th>
+                            <th scope="col">E-paštas</th>
+                            <th scope="col">Rolė</th>
+                            <th scope="col">Veiksmai</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -26,8 +26,8 @@
                                 <td>{{$user->email}}</td>
                                 <td>{{implode(', ', $user->roles()->get()->pluck('name')->toArray())}}</td>
                                 <td>
-                                    <a href="{{route('admin.users.edit',$user->id)}}" ><button type="button" class="btn btn-primary">Edit</button></a>
-                                    <a href="{{route('admin.users.destroy',$user->id)}}" ><button type="button" class="btn btn-primary">Delete</button></a>
+                                    <a href="{{route('admin.users.edit',$user->id)}}" ><button type="button" class="btn btn-primary">Redaguoti</button></a>
+                                    <a href="{{route('admin.users.destroy',$user->id)}}" ><button type="button" class="btn btn-primary">Trinti</button></a>
                                 </td>
                             </tr>
                         @endforeach

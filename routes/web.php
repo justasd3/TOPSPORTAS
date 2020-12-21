@@ -23,7 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
-    Route::resource('/users','UsersController',['except' => ['show','create','store']]);
+    Route::resource('/users','UsersController',['except' => ['show','create','store']])->middleware(['auth', 'admin']);
 });
 Route::get('/ivykiai', [App\Http\Controllers\IvykiuController::class, 'index'])->name('ivykiai');
 
@@ -47,3 +47,8 @@ Route::get('/pasiulymai/{id}', [App\Http\Controllers\PasiulymuController::class,
 Route::post('/pasiulymai/redaguoti/done', [App\Http\Controllers\PasiulymuController::class, 'redaguoti_done'])->name('pasiulymai.redaguoti.done');
 Route::get('/pasiulymai/trinti/{id}', [App\Http\Controllers\PasiulymuController::class, 'trinti'])->name('pasiulymai.trinti');
 
+# MESSSAGES
+Route::get('/messages', [App\Http\Controllers\MessagesController::class, 'index'])->name('messages');
+Route::get('/messages/create', [App\Http\Controllers\MessagesController::class, 'create'])->name('messages.create');
+Route::get('/messages/delete/{id}', [App\Http\Controllers\MessagesController::class, 'delete'])->name('messages.delete');
+Route::post('/messages/send', [App\Http\Controllers\MessagesController::class, 'send'])->name('messages.send');

@@ -23,7 +23,6 @@ class UsersTableSeeder extends Seeder
 
         $adminRole = Role::where('name','admin')->first();
         $moderatorRole = Role::where('name','moderator')->first();
-        $guestRole = Role::where('name','guest')->first();
         $userRole = Role::where('name','user')->first();
 
         $admin = User::create([
@@ -36,11 +35,6 @@ class UsersTableSeeder extends Seeder
             'email' => 'moderator@moderator.com',
             'password' => Hash::make('password')
         ]);
-        $guest = User::create([
-            'name' => 'Guest User',
-            'email' => 'guest@guest.com',
-            'password' => Hash::make('password')
-        ]);
         $user = User::create([
             'name' => 'Generic User',
             'email' => 'user@user.com',
@@ -49,7 +43,6 @@ class UsersTableSeeder extends Seeder
 
         $admin->roles()->attach($adminRole);
         $moderator->roles()->attach($moderatorRole);
-        $guest->roles()->attach($guestRole);
         $user->roles()->attach($userRole);
     }
 }

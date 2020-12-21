@@ -42,29 +42,34 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Prisijungti') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registruotis') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->email }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Atsijungti') }}
                                     </a>
+                                    @if (head(Auth::user()->roles()->get()->pluck('id')->toArray()) == 3)
                                     <a class="dropdown-item" href="{{route('admin.users.index')}}">
-                                        Users Management
+                                        Vartotojų administravimas
+                                    </a>
+                                    @endif
+                                    <a class="dropdown-item" href="{{route('messages')}}">
+                                        Žinutės
                                     </a>
                                     <a class="dropdown-item" href="{{route('ivykiai')}}">
                                         Įvykiai

@@ -51,7 +51,7 @@ class PasiulymuController extends Controller
     {
         $ivykis = Pasiulymai::find($id)->first();
         $ivykis->delete();
-        return redirect('/pasiulymai');
+        return redirect(Request::url());
     }
 
 }
