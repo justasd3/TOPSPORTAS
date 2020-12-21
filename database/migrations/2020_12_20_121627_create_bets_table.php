@@ -21,6 +21,24 @@ class CreateBetsTable extends Migration
             $table->integer('IvykioId');
             $table->integer('Mokejimo_statusas')->default(0);
         });
+
+        DB::table('bets')->insert(
+            array(
+                'Komanda' => 'Žalgiris',
+                'Statymo_suma' => '60',
+                'ZaidejoId' => '1',
+                'IvykioId' => '1',
+            )
+        );
+
+        DB::table('bets')->insert(
+            array(
+                'Komanda' => 'Dzūkija',
+                'Statymo_suma' => '30',
+                'ZaidejoId' => '1',
+                'IvykioId' => '2',
+            )
+        );
     }
 
     /**

@@ -20,6 +20,15 @@ class CreateTransactionsTable extends Migration
             $table->date('data');
             $table->integer('ZaidejoId');
         });
+
+        DB::table('transactions')->insert(
+            array(
+                'kiekis' => '40',
+                'papildymas' => true,
+                'data' => '2020-12-21',
+                'ZaidejoId' => '1',
+            )
+        );
     }
 
     /**

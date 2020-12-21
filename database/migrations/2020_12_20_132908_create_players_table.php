@@ -19,6 +19,13 @@ class CreatePlayersTable extends Migration
             $table->integer('Balance');
             $table->integer('Bank')->default(0);
         });
+
+        DB::table('players')->insert(
+            array(
+                'Username' => 'Saulius',
+                'Balance' => '300',
+            )
+        );
     }
 
     /**

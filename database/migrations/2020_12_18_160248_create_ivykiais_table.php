@@ -26,6 +26,32 @@ class CreateIvykiaisTable extends Migration
             $table->boolean('status');
             $table->time('laikas');
         });
+
+        DB::table('ivykiais')->insert(
+            array(
+                'pradzia' => '2020-12-31',
+                'trukme' => '90',
+                'koeficientas_1' => '2.5',
+                'koeficientas_2' => '1.5',
+                'komanda_1' => 'Rytas',
+                'komanda_2' => 'Žalgiris',
+                'status' => false,
+                'laikas' => '12:05',
+            )
+        );
+
+        DB::table('ivykiais')->insert(
+            array(
+                'pradzia' => '2020-12-31',
+                'trukme' => '90',
+                'koeficientas_1' => '0.8',
+                'koeficientas_2' => '1.2',
+                'komanda_1' => 'Dzūkija',
+                'komanda_2' => 'Neptūnas',
+                'status' => false,
+                'laikas' => '12:05',
+            )
+        );
     }
 
     /**
