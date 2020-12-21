@@ -46,7 +46,7 @@
                                                 <th scope="row">{{ $ivyk->koeficientas_1}}</th>
                                                 <th scope="row">{{ $ivyk->pradzia }}</th>
                                                 <th scope="row">{{ $ivyk->laikas }}</th>
-                                            @if(Auth::user()->email == "admin@admin.com")
+                                            @if(Auth::user()->email == "admin@admin.admin")
                                                 <th scope="row"><a href="{{route('ivykiai.redaguoti', $ivyk->id)}}"><button type="button" class="btn btn-primary btn-sm">Redaguoti</button></a></th>
                                                 <th scope="row"><a href="{{route('ivykiai.trinti', $ivyk->id)}}"><button type="button" class="btn btn-primary btn-sm">Trinti</button></a></th>
                                                 @endif
