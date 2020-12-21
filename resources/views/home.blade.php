@@ -57,12 +57,13 @@
                             </tr>
                             </thead>
                             @foreach($ivykiai as $ivyk)
-                            <tr>
+                                @if($ivyk->status == 1)
+                            <tr hidden> @endif
                                     <th scope="col"><a href="{{route('ivykiai')}}"> {{$ivyk->komanda_1}}</a></th>
                                     <th scope="col"><a href="{{route('ivykiai')}}"> {{$ivyk->komanda_2}}</a></th>
                                     <th scope="col"><a href="{{route('ivykiai')}}"> {{$ivyk->pradzia}}</a></th>
-                            </tr>
-                            @endforeach
+                            </tr></div>
+                                @endforeach
                         </table>
 
                     </div>
