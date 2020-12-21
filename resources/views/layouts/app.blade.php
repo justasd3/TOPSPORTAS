@@ -68,6 +68,9 @@
                                         Vartotojų administravimas
                                     </a>
                                     @endif
+                                    <a class="dropdown-item" href="{{route('profile')}}">
+                                        Profilis
+                                    </a>
                                     <a class="dropdown-item" href="{{route('messages')}}">
                                         Žinutės
                                     </a>

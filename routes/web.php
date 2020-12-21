@@ -52,3 +52,7 @@ Route::get('/messages', [App\Http\Controllers\MessagesController::class, 'index'
 Route::get('/messages/create', [App\Http\Controllers\MessagesController::class, 'create'])->name('messages.create');
 Route::get('/messages/delete/{id}', [App\Http\Controllers\MessagesController::class, 'delete'])->name('messages.delete');
 Route::post('/messages/send', [App\Http\Controllers\MessagesController::class, 'send'])->name('messages.send');
+
+# Profilis
+Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
+Route::post('/profile/update', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');

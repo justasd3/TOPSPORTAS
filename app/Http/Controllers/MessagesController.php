@@ -31,7 +31,8 @@ class MessagesController extends Controller
     public function delete(int $id)
     {
         error_log($id);
-        $message = UserMessages::find($id)->first();
+        $message = UserMessages::where('id', $id)->first();
+        var_dump($message);
         $message->delete();
 
         return redirect()->route('messages');
