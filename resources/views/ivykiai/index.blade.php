@@ -12,7 +12,7 @@
                             <div class="card-header">ĮVYKIAI
                             <a href="{{route("ivykiai.kurti") }}">
                                 @csrf
-                                @if(Auth::user()->email == "admin@admin.com")
+                                @if(Auth::user()->email == "admin@admin.admin")
                                 <button type="button" class="btn btn-success float-right"> Kurti įvykį
                                 </button>@endif
 

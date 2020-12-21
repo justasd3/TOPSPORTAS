@@ -189,9 +189,9 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Kernel.php" />
-      <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHP Script.Kernel.php" />
       <item itemvalue="PHP Script.server.php" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
     </list>
     <recent_temporary>
       <list>
@@ -215,6 +215,7 @@
       <workItem from="1608383100286" duration="767000" />
       <workItem from="1608463343052" duration="12575000" />
       <workItem from="1608490478945" duration="1631000" />
+      <workItem from="1608549063728" duration="490000" />
     </task>
     <servers />
   </component>
@@ -231,6 +232,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
