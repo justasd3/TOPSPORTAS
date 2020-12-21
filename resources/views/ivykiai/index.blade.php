@@ -7,13 +7,15 @@
         <form>
             <div class="container pt-4">
                 <div class="row justify-content-center">
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">ĮVYKIAI
                             <a href="{{route("ivykiai.kurti") }}">
                                 @csrf
+                                @if(Auth::user()->email == "admin@admin.com")
                                 <button type="button" class="btn btn-success float-right"> Kurti įvykį
-                                </button>
+                                </button>@endif
+
                             </a>
                             </div>
                             <div class="card-body">
@@ -27,8 +29,10 @@
                                         <th scope="col">Komanda 2</th>
                                         <th scope="col">Koeficientas 2</th>
                                         <th scope="col">Pradzia</th>
-                                        <th scope="col">Veiksmai</th>
+                                        <th scope="col">Laikas</th>
 
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
                                         <th scope="col"></th>
                                     </tr>
                                     </thead>
@@ -41,12 +45,16 @@
                                                 <th scope="row">{{ $ivyk->komanda_2 }}</th>
                                                 <th scope="row">{{ $ivyk->koeficientas_1}}</th>
                                                 <th scope="row">{{ $ivyk->pradzia }}</th>
-                                                <th scope="row"><a href="{{route('ivykiai.redaguoti', $ivyk->id)}}"><button type="button" class="btn btn-primary">Redaguoti</button></a></th>
-                                                <th scope="row"><a href="{{route('ivykiai.trinti', $ivyk->id)}}"><button type="button" class="btn btn-primary">Trinti</button></a></th>
+                                                <th scope="row">{{ $ivyk->laikas }}</th>
+                                            @if(Auth::user()->email == "admin@admin.com")
+                                                <th scope="row"><a href="{{route('ivykiai.redaguoti', $ivyk->id)}}"><button type="button" class="btn btn-primary btn-sm">Redaguoti</button></a></th>
+                                                <th scope="row"><a href="{{route('ivykiai.trinti', $ivyk->id)}}"><button type="button" class="btn btn-primary btn-sm">Trinti</button></a></th>
+                                                @endif
+                                                <th scope="row"><a href="/createBet/playerId=1&eventId={{$ivyk->id}}"><button type="button" class="btn btn-primary btn-sm">Kurti statymą</button></a></th>
                                             </tr>
                                             <tbody>
                                             @endforeach
-                                            </tbody>
+                                        </tbody>
                                 </table>
                             </div>
                         </div>

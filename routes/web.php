@@ -27,13 +27,13 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 });
 Route::get('/ivykiai', [App\Http\Controllers\IvykiuController::class, 'index'])->name('ivykiai');
 
-Route::get('/ivykiai/kurti', [App\Http\Controllers\IvykiuController::class, 'kurti'])->name('ivykiai.kurti');
+Route::get('/ivykiai/kurti', [App\Http\Controllers\IvykiuController::class, 'kurti'])->name('ivykiai.kurti')->middleware('can:edit');
 Route::post('/ivykiai/done', [App\Http\Controllers\IvykiuController::class, 'done'])->name('ivykiai.done');
 
-Route::get('/ivykiai/{id}', [App\Http\Controllers\IvykiuController::class, 'redaguoti'])->name('ivykiai.redaguoti');
+Route::get('/ivykiai/{id}', [App\Http\Controllers\IvykiuController::class, 'redaguoti'])->name('ivykiai.redaguoti')->middleware('can:edit');
 Route::post('/ivykiai/redaguoti/done', [App\Http\Controllers\IvykiuController::class, 'redaguoti_done'])->name('ivykiai.redaguoti.done');
 
-Route::get('/ivykiai/trinti/{id}', [App\Http\Controllers\IvykiuController::class, 'trinti'])->name('ivykiai.trinti');
+Route::get('/ivykiai/trinti/{id}', [App\Http\Controllers\IvykiuController::class, 'trinti'])->name('ivykiai.trinti')->middleware('can:edit');
 Route::get('/komanda/{pavadinimas}', [App\Http\Controllers\HomeController::class, 'komanda'])->name('komanda');
 
 
@@ -46,6 +46,20 @@ Route::post('/pasiulymai/done', [App\Http\Controllers\PasiulymuController::class
 Route::get('/pasiulymai/{id}', [App\Http\Controllers\PasiulymuController::class, 'redaguoti'])->name('pasiulymai.redaguoti');
 Route::post('/pasiulymai/redaguoti/done', [App\Http\Controllers\PasiulymuController::class, 'redaguoti_done'])->name('pasiulymai.redaguoti.done');
 Route::get('/pasiulymai/trinti/{id}', [App\Http\Controllers\PasiulymuController::class, 'trinti'])->name('pasiulymai.trinti');
+
+/*Bet routes*/
+
+Route::get('/createBet/playerId={pid}&eventId={eid}', 'BetController@createSubmission');
+Route::post('/createBet/playerId={pid}&eventId={eid}', 'BetController@postBet');
+
+Route::get('/editBet/playerId={pid}&betId={bid}&eventId={eid}','BetController@createEdit');
+Route::post('/editBet/playerId={pid}&betId={bid}&eventId={eid}','BetController@editBet');
+
+Route::get('/viewBet/playerId={pid}&betId={bid}','BetController@showBet');
+Route::get('/allBetsPlayer/playerId={pid}','BetController@index');
+
+Route::get('/payout/playerId={pid}&betId={bid}','BetController@payoutsGet');
+Route::post('/payout/playerId={pid}&betId={bid}','BetController@payout');
 
 # MESSSAGES
 Route::get('/messages', [App\Http\Controllers\MessagesController::class, 'index'])->name('messages');

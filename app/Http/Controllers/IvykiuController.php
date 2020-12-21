@@ -22,6 +22,7 @@ class IvykiuController extends Controller
 
     public function done(Request $request)
     {
+
         $ivykis = Ivykiai::create([
             'pradzia' => $request->input('start'),
             'trukme' => $request->input('trukme'),
@@ -29,6 +30,7 @@ class IvykiuController extends Controller
             'koeficientas_2' => $request->input('kof_2'),
             'komanda_1' => $request->input('Komanda_1'),
             'komanda_2' => $request->input('Komanda_2'),
+            'laikas' => $request->input('laikas'),
             'status' => 0,
         ]);
         $ivykis->save();

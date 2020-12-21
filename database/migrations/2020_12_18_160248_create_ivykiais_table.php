@@ -24,6 +24,7 @@ class CreateIvykiaisTable extends Migration
             $table->string('komanda_2');
             $table->string('rezultatas')->nullable();
             $table->boolean('status');
+            $table->time('laikas');
         });
     }
 

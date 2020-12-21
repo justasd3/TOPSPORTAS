@@ -15,6 +15,10 @@ class ProfileController
 
     public function update(Request $request)
     {
+        User::where('id', Auth::user()->id)
+            ->update(['address' => $request->input('address'),
+                'phoneNo' => $request->input('phoneNo')]);
 
+        return view('profile.index')->with('user', Auth::user());
     }
 }
