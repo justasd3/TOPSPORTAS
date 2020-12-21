@@ -5,30 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b0a9667-1676-4d92-ad3a-6e9914a6568c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BetController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Bet.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_20_121627_create_bets_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_20_132908_create_players_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/statymai/allBets.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/statymai/betAdd.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/statymai/betEdit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/statymai/payouts.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/statymai/viewBet.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IvykiuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IvykiuController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Ivykiai.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Ivykiai.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_18_160248_create_ivykiais_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_18_160248_create_ivykiais_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ivykiai/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ivykiai/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ivykiai/kurti.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ivykiai/kurti.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

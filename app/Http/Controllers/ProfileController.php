@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,6 +20,6 @@ class ProfileController
             ->update(['address' => $request->input('address'),
                 'phoneNo' => $request->input('phoneNo')]);
 
-        return view('profile.index')->with('user', Auth::user());
+        return redirect()->route('profile');
     }
 }
