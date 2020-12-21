@@ -102,13 +102,14 @@ class BetController extends Controller
         $player = DB::select('select * from players where id = ?',[$pid]);
         $bets = DB::select('select * from bets where id = ? AND ZaidejoId',[$bid, $pid]);
 
-        $sum = ((int)$bets[0]->Statymo_suma / 2);
+        // $sum = ((int)$bets[0]->Statymo_suma / 2);
+        $sum = ((int)$bets[0]->Statymo_suma);
 
         $balance = ((int)$player[0]->Balance + $sum);
 
-        $bank = ((int)$player[0]->Bank + $sum);
+        // $bank = ((int)$player[0]->Bank + $sum);
 
-        DB::update('update players set Balance = ?, Bank = ? where id = ?',[$balance,$bank,$pid]);
+        DB::update('update players set Balance = ? where id = ?',[$balance,$pid]);
 
         DB::update('update bets set Mokejimo_statusas = ? where id = ? AND ZaidejoId = ?',[1,$bid,$pid]);
 

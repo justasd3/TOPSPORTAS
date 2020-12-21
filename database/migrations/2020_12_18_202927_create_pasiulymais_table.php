@@ -21,6 +21,17 @@ class CreatePasiulymaisTable extends Migration
             $table->string('informacija');
             $table->string('pavadinimas');
         });
+
+        DB::table('pasiulymais')->insert(
+            array(
+                'created_at' => '2020-12-18',
+                'updated_at' => '2020-12-18',
+                'pradzia' => '2020-12-21',
+                'pabaiga' => '2020-12-31',
+                'informacija' => 'Nauji įvykiai papigiai',
+                'pavadinimas' => 'Akcija atrakcija',
+            )
+        );
     }
 
     /**
