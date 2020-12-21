@@ -79,6 +79,9 @@
                                     <a class="dropdown-item" href="{{route('messages')}}">
                                         Žinutės
                                     </a>
+                                    <a class="dropdown-item" href="/my-balance/playerId=1">
+                                        Mano Balansas
+                                    </a>
                                     <a class="dropdown-item" href="{{route('ivykiai')}}">
                                         Įvykiai
                                     </a>

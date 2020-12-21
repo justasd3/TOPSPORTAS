@@ -192,9 +192,9 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Kernel.php" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHP Script.Kernel.php" />
       <item itemvalue="PHP Script.server.php" />
-      <item itemvalue="PHPUnit.phpunit.xml" />
     </list>
     <recent_temporary>
       <list>

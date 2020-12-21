@@ -61,6 +61,13 @@ Route::get('/allBetsPlayer/playerId={pid}','BetController@index');
 Route::get('/payout/playerId={pid}&betId={bid}','BetController@payoutsGet');
 Route::post('/payout/playerId={pid}&betId={bid}','BetController@payout');
 
+// Balance routes
+
+Route::get('/my-balance/playerId={pid}','BalanceController@index');
+Route::post('/my-balance/add-balance/playerId={pid}','BalanceController@addBalance');
+Route::post('/my-balance/withdraw-to-bank/playerId={pid}','BalanceController@withdrawToBank');
+Route::get('/my-balance/history/playerId={pid}','BalanceController@history');
+
 # MESSSAGES
 Route::get('/messages', [App\Http\Controllers\MessagesController::class, 'index'])->name('messages');
 Route::get('/messages/create', [App\Http\Controllers\MessagesController::class, 'create'])->name('messages.create');
