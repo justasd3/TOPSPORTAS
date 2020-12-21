@@ -21,6 +21,14 @@ function validate(playerBalance) {
     <div class="container">
         <div class="row">
             <div class="col-8 offset-2">
+            <div class="text-center">
+            <h1>Statymo redagavimas</h1>
+                <hr>
+                <h4 class="mt-4">{{ $data['event'][0]->komanda_1 }} - {{ $data['event'][0]->komanda_2 }}</h4>
+                <h6>{{ $data['event'][0]->pradzia }}</h6>
+                <h6 class="mb-4">{{ date('H:i', strtotime($data['event'][0]->laikas)) }}</h6>
+                <hr>
+              </div>
                 <form name="form" id="form" action="/editBet/playerId=<?php echo $data['player'][0]->id; ?>&betId=<?php echo  $data['bets'][0]->id; ?>&eventId=<?php echo $data['event'][0]->id; ?>" onsubmit="return(validate(<?php echo $data['player'][0]->Balance; ?>));" method="POST">
                     @csrf
                     <div class="form-group">
@@ -43,7 +51,10 @@ function validate(playerBalance) {
                     </div>
                     <div class="form-group">
                         <label for="bet">Statymo suma</label>
-                        <input type="text" name="bet" class="form-control">
+                        <input type="text" name="bet" class="form-control" value="<?php echo $data['bets'][0]->Statymo_suma; ?>">
+                    </div>
+                    <div class="mb-4">
+                      <strong><p>Balanso likutis: {{ $data['player'][0]->Balance }} €</p></strong>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

@@ -81,7 +81,7 @@ class BetController extends Controller
             $difference = $oldBet - $newBet;
             $remain = ((int)$player[0]->Balance + (int)$difference);
         } else {
-            $remain = ((int)$player[0]->Balance - (int)$data['bet']);
+            $remain = ((int)$player[0]->Balance);
         }
         DB::update('update players set Balance = ? where id = ?',[$remain,$pid]);
 

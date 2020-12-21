@@ -1,6 +1,5 @@
 <head>
 <script type="text/javascript">
-
 function validate(playerBalance) {
   var a = parseInt(document.form.bet.value);
   var b = parseInt(playerBalance);
